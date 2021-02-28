@@ -1,9 +1,9 @@
 {
   "targets": {
-    "csci-260-2021": {
+    "csci-260-2021-jobs": {
       "hosting": {
         "jobs-frontend": [
-          "csci-260-2021"
+          "csci-260-2021-jobs"
         ]
       }
     }
