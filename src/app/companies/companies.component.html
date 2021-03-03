@@ -1,0 +1,15 @@
+<h3>List of Companies</h3>
+
+<p *ngIf="!ready; else show">
+  Please wait ...
+</p>
+
+<ng-template #show>
+  <p *ngFor="let c of companies">
+    <b>{{c.name}}</b>
+    <br>
+    {{c.address1}}
+    <br>
+    {{c.city}} {{c.zip_code}}
+  </p>
+</ng-template>
