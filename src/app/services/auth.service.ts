@@ -83,11 +83,6 @@ export class AuthService {
   async createRegular(reg: FBAuthUser): Promise<Message> {
     const msg: Message = { success: false, message: '' };
 
-    if (reg.email.split('@')[1].toLowerCase() !== 'xavier.edu') {
-      msg.message = 'This application can only be accessed by valid Xavier University email addresses.';
-      return msg;
-    }
-
     try {
       const u = await this.firebaseAuth.createUserWithEmailAndPassword(reg.email, reg.password);
       try {
