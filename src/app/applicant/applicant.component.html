@@ -1,7 +1,59 @@
-<h3>Applicant Profile</h3>
+
+<h2>Applicant Profile</h2>
+
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+        First Name:
+        <input type="text" formControlName="firstName" required>
+    </label>
 
     <label>
-    Name:
-    <input type="text" [formControl]="profileName">
-</label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
 
+    <div formGroupName="address">
+        <h3>Address</h3>
+
+        <label>
+            Street:
+            <input type="text" formControlName="street">
+        </label><br>
+
+        <label>
+            City:
+            <input type="text" formControlName="city">
+        </label><br>
+
+        <label>
+            State:
+            <input type="text" formControlName="state">
+        </label><br>
+
+        <label>
+            Zip Code:
+            <input type="text" formControlName="zip">
+        </label><br>
+    </div>
+</form>
+
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+<p>
+    <button (click)="updateProfile()">Update Profile</button>
+</p>
+
+<!--
+
+<app-name-editor></app-name-editor>
+
+<p>
+    Value: {{ profileFirstName.value }}
+</p>
+
+<p>
+    <button (click)="updateName()">Update Name</button>
+</p>
+
+-->
