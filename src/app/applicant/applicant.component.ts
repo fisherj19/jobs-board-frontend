@@ -13,6 +13,8 @@ export class ApplicantComponent {
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
+    dateOfBirth: [''],
+    gender: [''],
     address: this.fb.group({
     street: [''],
     city: [''],
