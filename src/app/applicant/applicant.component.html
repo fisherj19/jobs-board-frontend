@@ -3,83 +3,124 @@
 
 <!--Start of FORM-->
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <label>
-        First Name:
-        <input type="text" formControlName="firstName" required>
-    </label>
-
-    <label>
-        Last Name:
-        <input type="text" formControlName="lastName">
-    </label>
-
-    <div>
+    <fieldset>
         <label>
-            Date of Birth:
-            <input type="text" formControlName="dateOfBirth">
+            First Name:<br>
+            <input type="text" formControlName="firstName" required><br>
         </label>
-
+    
         <label>
-            Gender:
-            <select id="gender">
-                <option value="select">Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+            Last Name:<br>
+            <input type="text" formControlName="lastName"><br>
         </label>
-    </div>
+    
+        <div>
+            <label>
+                Date of Birth:<br>
+                <input type="text" formControlName="dateOfBirth"><br>
+            </label>
+    
+            <label>
+                Gender:
+                <select id="gender">
+                    <option value="select">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+        </div>
+    </fieldset>
 
 <!--Address-->
     <div formGroupName="address">
-        <h3>Address</h3>
+        <fieldset>
+            <h3>Address</h3>
 
-        <label>
-            Street:
-            <input type="text" formControlName="street">
-        </label><br>
-
-        <label>
-            City:
-            <input type="text" formControlName="city">
-        </label><br>
-
-        <label>
-            State:
-            <input type="text" formControlName="state">
-        </label><br>
-
-        <label>
-            Zip Code:
-            <input type="text" formControlName="zip">
-        </label><br>
-
-        <label>
-            Is This Your Current Adress?
-            <select id="currentAddress">
-                <option value="select">Select</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-        </label><br>
-
-        <label>
-            It This Your Primary Address?
-            <select id="primaryAddress">
-                <option value="select">Select</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-        </label><br>
+            <label>
+                Street:<br>
+                <input type="text" formControlName="street">
+            </label><br>
+    
+            <label>
+                City:<br>
+                <input type="text" formControlName="city">
+            </label><br>
+    
+            <label>
+                State:<br>
+                <input type="text" formControlName="state">
+            </label><br>
+    
+            <label>
+                Zip Code:<br>
+                <input type="text" formControlName="zip">
+            </label><br>
+    
+            <input type="checkbox" id="currentAddress" name="currentAddress">
+            <label for="currentAddress">Is This Your Current Adress?</label><br>
+    
+            <input type="checkbox" id="primaryAddress" name="primaryAddress">
+            <label for="primaryAddress">Is This Your Primary Adress?</label><br>
+        </fieldset>
     </div>
+
+<!--MORE INFO-->
+
+    <fieldset id="referalSource">
+        <label>
+            Referal Source:
+            <select>
+                <option value="select">Select</option>
+                <option value="emailSponsor">Email Sponsor</option>
+                <option value="inPerson">In Person</option>
+                <option value="employee">Employee</option>
+            </select>
+        </label><br>
+
+        <label>
+            City Link Status:
+            <select>
+                <option value="select">Select</option>
+                <option value="citizen">Citizen</option>
+                <option value="immigrant">Immigrant</option>
+                <option value="other">Other</option>
+            </select>
+        </label><br>
+
+        <label>
+            Staffing Agency:
+            <select>
+                <option value="select">Select</option>
+                <option value="something">Something</option>
+                <option value="something">Something</option>
+                <option value="other">Other</option>
+            </select>
+        </label><br>
+
+        <label>
+            Status:
+            <select>
+                <option value="select">Select</option>
+                <option value="something">Something</option>
+                <option value="something">Something</option>
+                <option value="other">Other</option>
+            </select>
+        </label><br>
+
+        <label>
+            Job Interest:<br>
+            <input type="text" formControlName="jobInterest"><br>
+        </label>
+    </fieldset>
 </form>
 
 <!--SUBMIT BUTTON-->
-<button type="submit" [disabled]="!profileForm.valid">Submit</button>
-<button type="reset">Reset</button>
+<button id="formButton" type="submit" [disabled]="!profileForm.valid">Submit</button>
+<button id="formButton" type="reset">Reset</button>
 
 <p>
-    <button (click)="updateProfile()">Update Profile</button>
+    <button id="formButton" (click)="updateProfile()">Update Profile</button>
 </p>
 
 <!--
