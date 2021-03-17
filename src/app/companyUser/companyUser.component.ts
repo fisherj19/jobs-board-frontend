@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CompanyUser, CompanyUserService } from './companyUser.service';
 
 @Component({
-  templateUrl: './companies.component.html'
+  templateUrl: './companyUser.component.html'
 })
 export class CompanyUserComponent implements OnInit {
   ready = false;

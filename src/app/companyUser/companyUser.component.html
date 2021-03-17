@@ -5,11 +5,7 @@
 </p>
 
 <ng-template #show>
-  <p *ngFor="let c of companies">
-    <b>{{c.name}}</b>
-    <br>
-    {{c.address1}}
-    <br>
-    {{c.city}} {{c.zip_code}}
+  <p *ngFor="let c of companyUser">
+    {{c.primary_first_name}}
   </p>
 </ng-template>

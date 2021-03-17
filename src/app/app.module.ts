@@ -29,7 +29,6 @@ import { HttpAuthInterceptor } from './services/http-interceptor.service';
 
 import { AppComponent } from './app.component';
 import { ApplicantComponent } from './applicant/applicant.component';
-import { CompanyUserComponent } from './companyUser/companyUser.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './views/login.component';
@@ -67,7 +66,6 @@ import { VerifyComponent } from './views/verify.component';
   declarations: [
     AppComponent,
     ApplicantComponent,
-    CompanyUserComponent,
     LoginComponent,
     RegisterComponent,
     DialogComponent,
