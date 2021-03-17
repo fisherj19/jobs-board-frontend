@@ -1,11 +1,1 @@
 <h3>List of Company Users</h3>
-
-<p *ngIf="!ready; else show">
-  Please wait ...
-</p>
-
-<ng-template #show>
-  <p *ngFor="let c of companyUser">
-    {{c.primary_first_name}}
-  </p>
-</ng-template>
