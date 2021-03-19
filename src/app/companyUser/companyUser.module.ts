@@ -1,3 +1,4 @@
+/**
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,3 +14,4 @@ import { CompanyUserRoutingModule } from './companyUser-routing.module';
   ]
 })
 export class CompanyUserModule { }
+*/

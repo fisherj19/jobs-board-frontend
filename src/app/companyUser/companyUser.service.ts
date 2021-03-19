@@ -1,3 +1,4 @@
+/**
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -37,3 +38,4 @@ export class CompanyUserService {
     return this.http.get<CompanyUser[]>(`${this.server}/api/companies`);
   }
 }
+*/

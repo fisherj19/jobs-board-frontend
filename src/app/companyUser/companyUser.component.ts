@@ -1,4 +1,7 @@
+/**
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { CompanyUser, CompanyUserService } from './companyUser.service';
 
@@ -6,15 +9,25 @@ import { CompanyUser, CompanyUserService } from './companyUser.service';
   templateUrl: './companyUser.component.html'
 })
 export class CompanyUserComponent implements OnInit {
-  ready = false;
   companyUser: CompanyUser[];
 
-  constructor(private companyUserService: CompanyUserService) { }
+  constructor(
+    private companyUserService: CompanyUserService, 
+    private route: ActivatedRoute,
+    private location: Location) 
+  { }
 
   ngOnInit(): void {
-    this.companyUserService.getAll().subscribe(companyUser => {
-      this.companyUser = companyUser;
-      this.ready = true;
-    });
+    this.getCompanyUser();
   }
-}
+
+  getHero(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.companyUserService.getCompanyUser(id)
+      .subscribe(companyUser => this.companyUser = companyUser);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+}*/

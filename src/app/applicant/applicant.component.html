@@ -1,8 +1,10 @@
 
 <h2>Applicant Profile</h2>
 
+<meta content="width=divice-width, initial-scale=1.0">
+
 <!--Start of FORM-->
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <fieldset>
         <label>
             First Name:<br>
@@ -113,15 +115,15 @@
             <input type="text" formControlName="jobInterest"><br>
         </label>
     </fieldset>
-</form>
 
 <!--SUBMIT BUTTON-->
-<button id="formButton" type="submit" [disabled]="!profileForm.valid">Submit</button>
+<button id="formButton" type="submit" [disabled]="!profileForm.valid" value="Submit" (click)="onSubmit()" form="">Submit</button>
 <button id="formButton" type="reset">Reset</button>
 
 <p>
     <button id="formButton" (click)="updateProfile()">Update Profile</button>
 </p>
+</form>
 
 <!--
 
