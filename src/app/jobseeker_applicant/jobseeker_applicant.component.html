@@ -24,10 +24,19 @@
                 Gender:
                 <select id="gender">
                     <option value="select">Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
                     <option value="other">Other</option>
                 </select>
+            </label>
+
+            <label>
+                Phone Number:<br>
+                <input type="text" formControlName="phone_number"><br>
+            </label>
+            <label>
+                Email Address:<br>
+                <input type="text" formControlName="email_address"><br>
             </label>
         </div>
     </fieldset>
@@ -67,56 +76,66 @@
 
 <!--MORE INFO-->
 
-    <fieldset id="referalSource">
+    <fieldset>
         <label>
-            Referal Source:
-            <select>
+            Do you have a license?:
+            <select formControlName = "has_license">
                 <option value="select">Select</option>
-                <option value="emailSponsor">Email Sponsor</option>
-                <option value="inPerson">In Person</option>
-                <option value="employee">Employee</option>
+                <option value= "true" >Yes</option>
+                <option value= "false">No</option>
             </select>
         </label><br>
 
         <label>
-            City Link Status:
-            <select>
+            Do you own a car?:
+            <select formControlName = "owns_car">
                 <option value="select">Select</option>
-                <option value="citizen">Citizen</option>
-                <option value="immigrant">Immigrant</option>
-                <option value="other">Other</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
             </select>
         </label><br>
 
         <label>
-            Staffing Agency:
-            <select>
+            Do you have a ride available?:
+            <select formControlName = "ride_available">
                 <option value="select">Select</option>
-                <option value="something">Something</option>
-                <option value="something">Something</option>
-                <option value="other">Other</option>
+                <option value="true">Yes</option>
+                <option value="false">Yes</option>
             </select>
         </label><br>
 
         <label>
-            Status:
-            <select>
+            Select your start availability:
+            <select formControlName = "status_id">
                 <option value="select">Select</option>
-                <option value="something">Something</option>
-                <option value="something">Something</option>
-                <option value="other">Other</option>
+                <option value= 1 >Ready to start in 6+ months</option>
+                <option value= 2 >Ready to start in 3-5 months</option>
+                <option value= 5 >Ready to start in 1-2 months</option>
+                <option value= 7 >Ready to start in less than 1 month</option>
             </select>
         </label><br>
 
         <label>
-            Job Interest:<br>
-            <input type="text" formControlName="jobInterest"><br>
+            Enter your job skills:<br>
+            <input type="text" formControlName="skills"><br>
         </label>
+
+        <label>
+            Enter your Support Contact:<br>
+            <input type="text" formControlName="support_contact"><br>
+        </label>
+
+        <label>
+            Enter jobs you are interested in:<br>
+            <input type="text" formControlName="job_interests" required><br>
+        </label>
+
     </fieldset>
+    <button id="formButton" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
 </form>
 
 <!--SUBMIT BUTTON-->
-<button id="formButton" type="submit" [disabled]="!profileForm.valid">Submit</button>
 <button id="formButton" type="reset">Reset</button>
 
 <p>

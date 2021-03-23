@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { map } from 'rxjs/operators';
 
 import { HomeComponent } from './views/home.component';
-import { ApplicantComponent } from './applicant/applicant.component';
+import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.component';
 import { LoginComponent } from './views/login.component';
 import { VerifyComponent } from './views/verify.component';
 
