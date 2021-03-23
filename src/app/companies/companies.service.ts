@@ -34,6 +34,6 @@ export class CompanyService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Company[]> {
-    return this.http.get<Company[]>(`${this.server}/api/companies`);
+    return this.http.get<Company[]>(`${this.server}/api/companies_users`);
   }
 }

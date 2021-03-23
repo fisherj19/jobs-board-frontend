@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  server: 'https://somethingsomething.herokuapp.com',
+  server: 'https://csci260-jobs-board-backend.herokuapp.com',
   firebaseConfig: {
     apiKey: 'AIzaSyC5Vp0b26DL4PosTafR_dplXQKxMNljglY',
     authDomain: 'csci-260-2021-jobs.firebaseapp.com',
