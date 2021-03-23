@@ -28,12 +28,8 @@ import { environment } from '../environments/environment';
 import { HttpAuthInterceptor } from './services/http-interceptor.service';
 
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-import { ApplicantComponent } from './applicant/applicant.component';
-//import { CompanyUserComponent } from './companyUser/companyUser.component';
-=======
 import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.component';
->>>>>>> 4d414f2ecafb4754fd8aba6da4f4a3376462a1ca
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './views/login.component';
