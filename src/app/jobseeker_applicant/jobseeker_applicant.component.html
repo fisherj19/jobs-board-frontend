@@ -3,9 +3,11 @@
 
 <meta content="width=divice-width, initial-scale=1.0">
 
+<div id="profilePicture"></div>
+
 <!--Start of FORM-->
 <form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <fieldset>
+    <fieldset id="basicInfo">
         <label>
             First Name:<br>
             <input type="text" formControlName="firstName" required><br>
@@ -45,7 +47,7 @@
 
 <!--Address-->
     <div formGroupName="address">
-        <fieldset>
+        <fieldset id="address">
             <h3>Address</h3>
 
             <label>
@@ -78,7 +80,7 @@
 
 <!--MORE INFO-->
 
-    <fieldset>
+    <fieldset id="referalSource">
         <label>
             Do you have a license?:
             <select formControlName = "has_license">
@@ -133,15 +135,18 @@
         </label>
 
     </fieldset>
-</form>
   
 <!--SUBMIT BUTTON-->
 
 <button id="formButton" type="reset">Reset</button>
 
+<button id="formButton" type="submit">Submit</button>
+
 <p>
     <button id="formButton" (click)="updateProfile()">Update Profile</button>
 </p>
+
+</form>
 
 <!--
 

@@ -27,18 +27,7 @@ body {
 input[type=text] {
   margin: 8px 0;
 }
-
 /*
-button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
 #formButton:hover {
   background-color: red;
 }
@@ -52,7 +41,24 @@ fieldset {
   width: 250px;
 }
 
+#basicInfo {
+  position: absolute;
+  top: 48px; left: 500px;
+}
+
+#address {
+}
+
 #referalSource {
   position: absolute;
-  top: 48px; left: 300px;
+  top: 400px; left: 500px;
+}
+
+#profilePicture{
+  background-color: lightgrey;
+  width: 300px;
+  height: 400px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
 }
