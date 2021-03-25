@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { JobseekerService } from './jobseeker_applicant.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './jobseeker_applicant.component.html',
@@ -32,7 +33,7 @@ export class ApplicantComponent {
     job_interests: ['']
   });
   
-  constructor(private fb: FormBuilder, private jobseekerService: JobseekerService){}
+  constructor(private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
 
   updateProfile() {
     this.profileForm.patchValue({
@@ -41,6 +42,10 @@ export class ApplicantComponent {
         street: '123 Drew Street'
       }
     });
+  }
+
+  goProfilePage(){
+    this.router.navigate(['/js_profile'])
   }
 
   onSubmit(): void {

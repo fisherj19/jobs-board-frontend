@@ -37,6 +37,7 @@ import { RegisterComponent } from './views/register.component';
 import { DialogComponent } from './shared/dialog.component';
 import { HomeComponent } from './views/home.component';
 import { VerifyComponent } from './views/verify.component';
+import { JsProfileComponent } from './js_profile/js_profile.component';
 
 @NgModule({
   imports: [
@@ -72,7 +73,8 @@ import { VerifyComponent } from './views/verify.component';
     RegisterComponent,
     DialogComponent,
     HomeComponent,
-    VerifyComponent
+    VerifyComponent,
+    JsProfileComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpAuthInterceptor, multi: true }
