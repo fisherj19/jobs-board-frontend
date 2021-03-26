@@ -8,6 +8,7 @@ import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.co
 import { LoginComponent } from './views/login.component';
 import { VerifyComponent } from './views/verify.component';
 //import { CompanyUserComponent } from './companyUser/companyUser.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 const notLoggedIn = () => map(user => user ? ['home'] : true);
 
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'applicant', component: ApplicantComponent },
   { path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: notLoggedIn } },
   { path: 'verify', component: VerifyComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: !notLoggedIn } },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'companyprof', component: CompanyProfileComponent }
 ];
 
 @NgModule({

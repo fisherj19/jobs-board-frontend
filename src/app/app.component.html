@@ -24,6 +24,10 @@
     
     <span class="small-spacer"></span>
 
+    <button mat-raised-button class="clickabul" routerLink="/companyprof">Company Profile</button>
+    
+    <span class="small-spacer"></span>
+
     <ng-container *ngIf="isLoggedIn; else notLoggedIn">
       <ng-container *ngIf="!isVerified">
         <button mat-raised-button class="clickabul" routerLink="/verify">Verify</button>

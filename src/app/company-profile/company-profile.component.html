@@ -1,0 +1,57 @@
+<h2>Company Profile</h2>
+<form>
+    <label>
+        Company Description<input type = "text" formControlName="companyDes" required>
+    </label>
+    <p>
+
+    </p>
+    <h3>
+        Primary Contact 
+    </h3>
+    <label>
+        First Name<input type= "text" formControlName="fname" required><br>
+    </label>
+    <label>
+        Last Name<input type="text" formControlName="lname" required><br>
+    </label>
+    <label>
+        Phone Number<input type="number" formControlName="number" required><br>
+    </label>
+    <label>
+        Email<input type= "text" formControlName="email" required><br>
+    </label>
+    <p>
+
+    </p>
+    <h3>
+        Company Location
+    </h3>
+    <label>
+        Address<input type= "text" formControlName="street" required><br>
+    </label>
+    <label>
+        City<input type= "city" formControlName="street" required><br>
+    </label>
+    <label>
+        State
+        <select id="state">
+            <option value="Ohio">OH</option>
+            <option value="Kentucky">KY</option>
+            <option value="Indiana">IN</option>
+            
+        </select><br>
+
+    </label>
+    <label>
+        Zip Code<input type= "number" formControlName="zip" required><br>
+    </label>
+    <label>
+        Neighborhood
+            <select id="neighborhood">
+                <option value=""></option>
+            </select>
+    </label>
+
+</form>
+<button type="submit">Submit</button>
