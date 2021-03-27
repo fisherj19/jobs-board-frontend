@@ -2,6 +2,7 @@
 
 html, body {
   height: 100%;
+  //background-color: #88BDBC;
 }
 body {
   margin: 0;
@@ -60,10 +61,32 @@ fieldset {
 }
 
 #profilePicture{
+  position: sticky;
+  top: 50px; left: 200px;
   background-color: lightgrey;
   width: 150px;
   height: 150px;
   border: 15px solid green;
   padding: 50px;
   margin: 20px;
+}
+
+#js_basic_info{
+  border: 0;
+  position: absolute;
+  top: 100px; left: 500px;
+}
+
+#js_experience{
+  border: 1;
+  position:fixed;
+  top: 440px; left: 200px;
+  width: 500px;
+}
+
+#js_contact_info{
+  border: 1;
+  position:fixed;
+  top: 130px; left: 820px;
+  width: 300px;
 }
