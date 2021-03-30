@@ -38,6 +38,7 @@ import { DialogComponent } from './shared/dialog.component';
 import { HomeComponent } from './views/home.component';
 import { VerifyComponent } from './views/verify.component';
 import { JsProfileComponent } from './js_profile/js_profile.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 @NgModule({
   imports: [
@@ -68,13 +69,13 @@ import { JsProfileComponent } from './js_profile/js_profile.component';
   declarations: [
     AppComponent,
     ApplicantComponent,
-    //CompanyUserComponent,
     LoginComponent,
     RegisterComponent,
     DialogComponent,
     HomeComponent,
     VerifyComponent,
-    JsProfileComponent
+    JsProfileComponent,
+    CompanyProfileComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpAuthInterceptor, multi: true }

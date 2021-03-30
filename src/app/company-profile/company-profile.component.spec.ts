@@ -1,21 +1,20 @@
-/**
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompanyUserComponent } from './companyUser.component';
+import { CompanyProfileComponent } from './company-profile.component';
 
-describe('CompaniesComponent', () => {
-  let component: CompanyUserComponent;
-  let fixture: ComponentFixture<CompanyUserComponent>;
+describe('CompanyProfileComponent', () => {
+  let component: CompanyProfileComponent;
+  let fixture: ComponentFixture<CompanyProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompanyUserComponent ]
+      declarations: [ CompanyProfileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompanyUserComponent);
+    fixture = TestBed.createComponent(CompanyProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,4 +23,3 @@ describe('CompaniesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-*/

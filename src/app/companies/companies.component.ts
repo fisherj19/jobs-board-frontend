@@ -20,7 +20,7 @@ export class CompaniesComponent implements OnInit {
     });
   }
 
-  updateProfile(){
-    this.router.navigate(['/js_profile'])
+  goCompanyProfilePage(){
+    this.router.navigate(['/company-profile'])
   }
 }
