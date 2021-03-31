@@ -75,11 +75,18 @@ fieldset {
   border: 0;
   margin-left: 20px;
   margin-top: 60px;
+  margin-right: 60px;
+}
+
+#f-js_basic_info{
+  border: 0;
 }
 
 .js_experience{
+  position: relative;
+  top: 320px;
+  right: 640px;
   border: 1;
-  margin-left: 100px;
 }
 
 #f-js_experience{
@@ -87,7 +94,7 @@ fieldset {
 }
 
 .js_contact_info{
-  float:right;
+  position: relative;
   border: 1;
   margin-right: 200px;
 }
