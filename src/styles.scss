@@ -60,32 +60,44 @@ fieldset {
 }
 
 #profilePicture{
-  position: sticky;
-  top: 50px; left: 200px;
+  float: left;
   background-color: lightgrey;
   width: 150px;
   height: 150px;
   border: 15px solid green;
   padding: 50px;
-  margin: 20px;
+  margin-left: 200px;
+  margin-top: 30px;
 }
 
-#js_basic_info{
+.js_basic_info{
+  float:left;
   border: 0;
-  position: absolute;
-  top: 100px; left: 500px;
+  margin-left: 20px;
+  margin-top: 60px;
 }
 
-#js_experience{
+.js_experience{
   border: 1;
-  position:fixed;
-  top: 440px; left: 200px;
+  margin-left: 100px;
+}
+
+#f-js_experience{
   width: 500px;
 }
 
-#js_contact_info{
+.js_contact_info{
+  float:right;
   border: 1;
-  position:fixed;
-  top: 130px; left: 820px;
+  margin-right: 200px;
+}
+
+#f-js_contact_info{
   width: 300px;
+}
+
+@media (max-height: 500px){
+  body {
+    background-color: green;
+  }
 }
