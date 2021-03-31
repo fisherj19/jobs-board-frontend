@@ -3,6 +3,8 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { JobseekerService } from './jobseeker_applicant.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service'; 
+
 
 @Component({
   templateUrl: './jobseeker_applicant.component.html',
@@ -12,6 +14,7 @@ import { Router } from '@angular/router';
 
 export class ApplicantComponent {
   profileForm = this.fb.group({
+    id: [''],
     firstName: ['', Validators.required],
     lastName: [''],
     dateOfBirth: [''],
@@ -33,7 +36,7 @@ export class ApplicantComponent {
     job_interests: ['']
   });
   
-  constructor(private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
+  constructor(private authService: AuthService, private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
 
   updateProfile() {
     this.profileForm.patchValue({
@@ -50,6 +53,7 @@ export class ApplicantComponent {
 
   onSubmit(): void {
     const myForm = this.profileForm.value;
+    myForm.id = this.authService.u.uid
     this.jobseekerService.insert(myForm).subscribe(
       () => console.log('success'),
       (err) => console.error(err)

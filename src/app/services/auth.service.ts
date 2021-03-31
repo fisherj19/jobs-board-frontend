@@ -2,8 +2,12 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase';
+import { HttpClient } from '@angular/common/http';
+
 
 import { Message } from './message.service';
+import { environment } from 'src/environments/environment';
+//import { userInfo } from 'os';
 
 interface FBAuthUser {
   email: string;
@@ -18,6 +22,7 @@ interface FBAuthUser {
   banned: boolean;
 }
 
+
 export interface AuthParams {
   token: string;
   username: string;
@@ -29,8 +34,10 @@ export interface AuthParams {
 })
 export class AuthService {
   u: FBAuthUser;
+  fullUser: FBAuthUser;
   // store the URL to redirect to after login
   redirectURL = '/home';
+  private server = environment.server;
   private fbUser: firebase.User;
   private readonly emptyUser: FBAuthUser = {
     email: '',
@@ -46,7 +53,8 @@ export class AuthService {
 
   constructor(
     private readonly router: Router,
-    private readonly firebaseAuth: AngularFireAuth
+    private readonly firebaseAuth: AngularFireAuth,
+    private http: HttpClient
   ) {
     this.u = this.emptyUser;
     firebaseAuth.onAuthStateChanged(
@@ -67,9 +75,20 @@ export class AuthService {
           };
           user.getIdTokenResult().then((t: firebase.auth.IdTokenResult) => {
             this.u.token = t.token;
-            this.u.admin = !!t.claims.admin;
+
+            /*this.u.admin = !!t.claims.admin;
             this.u.deleted = !!t.claims.deleted;
             this.u.banned = !!t.claims.banned;
+            */
+
+           this.http.get<FBAuthUser>('${this.server}/api/jobseekers_users/${this.u.uid}').subscribe(dbUser => {
+             this.fullUser = {
+               ...this.u,
+               email: dbUser.email,
+               displayName: dbUser.displayName,
+               uid: dbUser.uid
+             }
+           })
           });
         } else {
           // user is not logged in, so reset
@@ -88,6 +107,7 @@ export class AuthService {
       try {
         await u.user.updateProfile({ displayName: reg.displayName, photoURL: '' });
         msg.message = 'You have been registered successfully.';
+        this.http.post(`${this.server}/api/jobseekers_users-api`, JSON.stringify(reg)).subscribe(); // this inserts into the database
         try {
           await this.verify();
           msg.success = true;
