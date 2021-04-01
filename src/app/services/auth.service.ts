@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Message } from './message.service';
 import { environment } from 'src/environments/environment';
-//import { userInfo } from 'os';
+// import { userInfo } from 'os';
 
 interface FBAuthUser {
   email: string;
@@ -22,6 +22,11 @@ interface FBAuthUser {
   banned: boolean;
 }
 
+interface User {
+  id: string;
+  email_address: string;
+  firstName: string;
+}
 
 export interface AuthParams {
   token: string;
@@ -81,7 +86,7 @@ export class AuthService {
             this.u.banned = !!t.claims.banned;
             */
 
-           this.http.get<FBAuthUser>('${this.server}/api/jobseekers_users/${this.u.uid}').subscribe(dbUser => {
+            this.http.get<FBAuthUser>(`${this.server}/api/jobseekers_users/${this.u.uid}`).subscribe(dbUser => {
              this.fullUser = {
                ...this.u,
                email: dbUser.email,
@@ -107,7 +112,12 @@ export class AuthService {
       try {
         await u.user.updateProfile({ displayName: reg.displayName, photoURL: '' });
         msg.message = 'You have been registered successfully.';
-        this.http.post(`${this.server}/api/jobseekers_users-api`, JSON.stringify(reg)).subscribe(); // this inserts into the database
+        const db: User = {
+          id: u.user.uid,
+          firstName: reg.displayName,
+          email_address: reg.email
+        };
+        this.http.post(`${this.server}/api/jobseekers_users`, JSON.stringify(db)).subscribe(); // this inserts into the database
         try {
           await this.verify();
           msg.success = true;
