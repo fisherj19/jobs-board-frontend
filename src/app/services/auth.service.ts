@@ -112,7 +112,7 @@ export class AuthService {
       try {
         await u.user.updateProfile({ displayName: reg.displayName, photoURL: '' });
         msg.message = 'You have been registered successfully.';
-        const db: User = {
+        const db: User = { 
           id: u.user.uid,
           firstName: reg.displayName,
           email_address: reg.email
