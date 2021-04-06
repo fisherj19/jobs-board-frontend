@@ -53,8 +53,8 @@ export class ApplicantComponent {
 
   onSubmit(): void {
     const myForm = this.profileForm.value;
-    myForm.id = this.authService.u.uid
-    this.jobseekerService.insert(myForm).subscribe(
+    myForm.id = this.authService.u.uid;
+    this.jobseekerService.update(myForm).subscribe(
       () => console.log('success'),
       (err) => console.error(err)
     );
