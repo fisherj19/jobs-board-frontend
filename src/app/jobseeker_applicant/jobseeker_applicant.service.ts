@@ -11,7 +11,9 @@ export interface Client {
   gender: string;
   support_contact: string;
   phone_number: string;
+  address: string;
   email_address: string;
+  experience: string;
   owns_car: boolean;
   has_license: boolean;
   ride_available: boolean;

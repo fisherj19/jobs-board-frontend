@@ -5,7 +5,6 @@ import { JobseekerService } from './jobseeker_applicant.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service'; 
 
-
 @Component({
   templateUrl: './jobseeker_applicant.component.html',
   selector: 'app-name-editor',
@@ -31,21 +30,19 @@ export class ApplicantComponent {
     owns_car: [''],
     ride_available: [''],
     status_id: [''],
+    experience: this.fb.group({
+      pos1: [''],
+      comp1: [''],
+      pos2: [''],
+      comp2: [''],
+      pos3: [''],
+      comp3: ['']
+    }),
     skills: [''],
-    support_contact: [''],
     job_interests: ['']
   });
   
   constructor(private authService: AuthService, private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
-
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address:{
-        street: '123 Drew Street'
-      }
-    });
-  }
 
   goProfilePage(){
     this.router.navigate(['/js_profile'])
@@ -60,3 +57,5 @@ export class ApplicantComponent {
     );
   }
 }
+
+
