@@ -27,11 +27,6 @@ body {
 input[type=text] {
   margin: 8px 0;
 }
-/*
-#formButton:hover {
-  background-color: red;
-}
-*/
 
 form {
   
@@ -47,16 +42,22 @@ fieldset {
 }
 
 #basicInfo {
-  position: absolute;
-  top: 48px; left: 500px;
+  float: left;
+  margin: 50px;
 }
 
 #address {
+  float: left;
+  margin: 50px;
 }
 
 #referalSource {
-  position: absolute;
-  top: 400px; left: 500px;
+  float: left;
+  margin: 50px;
+}
+
+#formButton {
+  margin: 10px;
 }
 
 #profilePicture{
