@@ -42,6 +42,7 @@ export class AuthService {
   fullUser: FBAuthUser;
   // store the URL to redirect to after login
   redirectURL = '/home';
+  redirectURLCompanies = '/company-profile'
   private server = environment.server;
   private fbUser: firebase.User;
   private readonly emptyUser: FBAuthUser = {
