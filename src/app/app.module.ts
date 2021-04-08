@@ -33,6 +33,7 @@ import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.co
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './views/login.component';
+import { LoginCompaniesComponent } from './views/loginCompanies.component';
 import { RegisterComponent } from './views/register.component';
 import { DialogComponent } from './shared/dialog.component';
 import { HomeComponent } from './views/home.component';
@@ -70,6 +71,7 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
     AppComponent,
     ApplicantComponent,
     LoginComponent,
+    LoginCompaniesComponent,
     RegisterComponent,
     DialogComponent,
     HomeComponent,

@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { HomeComponent } from './views/home.component';
 import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.component';
 import { LoginComponent } from './views/login.component';
+import { LoginCompaniesComponent } from './views/loginCompanies.component';
 import { VerifyComponent } from './views/verify.component';
 import { JsProfileComponent } from './js_profile/js_profile.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'applicant', component: ApplicantComponent },
   { path: 'company-profile', component: CompanyProfileComponent },
   { path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: notLoggedIn } },
+  { path: 'loginCompanies', component: LoginCompaniesComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: notLoggedIn } },
   { path: 'verify', component: VerifyComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: !notLoggedIn } },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
