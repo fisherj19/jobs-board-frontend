@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-js_profile',
-  templateUrl: './js_profile.component.html',
+  templateUrl: './jobseeker_profile.component.html',
   styles: [
   ]
 })
@@ -16,7 +16,6 @@ export class JsProfileComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-
   }
 
   updateProfile(){

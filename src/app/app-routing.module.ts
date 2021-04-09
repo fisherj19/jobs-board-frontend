@@ -7,14 +7,14 @@ import { HomeComponent } from './views/home.component';
 import { ApplicantComponent } from './jobseeker_applicant/jobseeker_applicant.component';
 import { LoginComponent } from './views/login.component';
 import { VerifyComponent } from './views/verify.component';
-import { JsProfileComponent } from './js_profile/js_profile.component';
+import { JsProfileComponent } from './jobseeker_profile/jobseeker_profile.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 const notLoggedIn = () => map(user => user ? ['home'] : true);
 
 const routes: Routes = [
   { path: 'companies', loadChildren: () => import('./companies/companies.module').then(m => m.CompaniesModule) },
-  { path: 'js_profile', component: JsProfileComponent },
+  { path: 'jobseeker_profile', component: JsProfileComponent },
   { path: 'home', component: HomeComponent },
   { path: 'applicant', component: ApplicantComponent },
   { path: 'company-profile', component: CompanyProfileComponent },

@@ -37,7 +37,7 @@ import { RegisterComponent } from './views/register.component';
 import { DialogComponent } from './shared/dialog.component';
 import { HomeComponent } from './views/home.component';
 import { VerifyComponent } from './views/verify.component';
-import { JsProfileComponent } from './js_profile/js_profile.component';
+import { JsProfileComponent } from './jobseeker_profile/jobseeker_profile.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 @NgModule({
