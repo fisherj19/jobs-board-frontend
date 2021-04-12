@@ -34,7 +34,7 @@ export class LoginCompaniesComponent implements OnInit {
 
   login(): void {
     const frm = this.loginForm.value;
-    const next = this.authService.redirectURL;
+    const next = this.authService.redirectURLCompanies;
 
     this.authService.signInWithEmail(frm.UserName, frm.Password)
       .then(() => this.router.navigate([next]))
