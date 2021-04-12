@@ -41,23 +41,27 @@ fieldset {
   width: 250px;
 }
 
-#basicInfo {
-  float: left;
-  margin: 50px;
-}
-
-#address {
-  float: left;
-  margin: 50px;
-}
-
-#referalSource {
-  float: left;
-  margin: 50px;
-}
-
+//Job Seeker CSS:
 #formButton {
+  float: left;
   margin: 10px;
+}
+
+#updateApplicant{
+  background-color:cornsilk;
+  height: 600px;
+}
+
+#basicInfo{
+  float: left;
+}
+
+#address{
+  float: left
+}
+
+#referalSource{
+  float: left;
 }
 
 #profilePicture{
@@ -101,6 +105,83 @@ fieldset {
 }
 
 #f-js_contact_info{
+  width: 300px;
+}
+
+//Company CSS:
+#background{
+  background-color:burlywood;
+}
+#company_container{
+  position: relative;
+  top: 30px;
+  height: 1300px;
+  background-color:#ffbcbc;
+  margin-left: 100px;
+  margin-right: 450px;
+}
+
+#main{
+  position: relative;
+  top: 30px;
+  height: 500px;
+  background-color:aqua;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#companyPicture{
+  position: relative;
+  left: 40px;
+  top: 30px;
+  background-color: lightgrey;
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+}
+
+.company_basic_info{
+  position: absolute;
+  bottom: 250px;
+  left: 300px;
+  border: 0;
+  margin-left: 20px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+#f-company_basic_info{
+  border: 0;
+}
+
+.company_experience{
+  position: relative;
+  left: 40px;
+  top: 40px;
+  border: 1;
+  margin-bottom: 30px;
+}
+
+#f-company_experience{
+  width: 500px;
+}
+
+.company_contact_info{
+  position: relative;
+  float: right;
+  border: 1;
+}
+
+#f-company_contact_info{
+  width: 300px;
+}
+
+.company_job_list{
+  border: 1;
+  margin-right: 200px;
+}
+
+#f-company_job_list{
   width: 300px;
 }
 
