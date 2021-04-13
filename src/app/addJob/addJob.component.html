@@ -5,12 +5,49 @@
   </p>
 
   <div>
-    <fieldset id="js_basic_info">
-        <h3>Name of job:</h3>
-        <p>Description of job:</p>
-        <p>Details of job:</p>
-        <p>Necessary Requirements:</p>
-        <p>- Has an available </p>
-        <p>- Has a license: Yes</p>
+    <fieldset id="job_info">
+      <legend>Basic Information</legend>
+      <label>
+        Name of Company:<br>
+        <input type="text" formControlName="jompanyName" required><br>
+      </label>
+      <label>
+        Name of Job:<br>
+        <input type="text" formControlName="jobName" required><br>
+      </label>
+      <label>
+        Description of Job:<br>
+        <input type="text" formControlName="jobDescription" required><br>
+      </label>
+      <fieldset id="moreInfo">
+      <legend>Who To Contact</legend>
+      <label>
+        Name:<br>
+        <input type="text" formControlName="contactName" required><br>
+      </label>
+      <label>
+        Phone Number:<br>
+        <input type="text" formControlName="contactNumber" required><br>
+      </label>
+      <label>
+        Email:<br>
+        <input type="text" formControlName="contactEmail" required><br>
+      </label>
+    </fieldset>
+      <label>
+        Date Listed:<br>
+        <input type="text" formControlName="listDate" required><br>
+      </label>
+      <label>
+        Date Filled:<br>
+        <input type="text" formControlName="fillDate" required><br>
+      </label>
+      
     </fieldset>
 </div>
+
+<button id="formButton" type="reset">Reset</button>
+<button id="formButton" type="submit">Submit</button>
+<p>
+    <button id="formButton" (click)="updateProfile()">Update Profile</button>
+</p>
