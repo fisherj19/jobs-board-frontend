@@ -22,6 +22,10 @@ export interface Client {
   skills: string;
 }
 
+export interface ID {
+  id: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
