@@ -25,7 +25,7 @@ interface FBAuthUser {
 interface User {
   id: string;
   email_address: string;
-  firstName: string;
+  displayName: string;
 }
 
 export interface AuthParams {
@@ -87,7 +87,7 @@ export class AuthService {
             this.u.banned = !!t.claims.banned;
             */
 
-            this.http.get<FBAuthUser>(`${this.server}/api/jobseekers_users/${this.u.uid}`).subscribe(dbUser => {
+            this.http.get<FBAuthUser>(`${this.server}/api/update_js_users/${this.u.uid}`).subscribe(dbUser => {
              this.fullUser = {
                ...this.u,
                email: dbUser.email,
@@ -115,10 +115,10 @@ export class AuthService {
         msg.message = 'You have been registered successfully.';
         const db: User = { 
           id: u.user.uid,
-          firstName: reg.displayName,
+          displayName: reg.displayName,
           email_address: reg.email
         };
-        this.http.post(`${this.server}/api/jobseekers_users`, JSON.stringify(db)).subscribe(); // this inserts into the database
+        this.http.post(`${this.server}/api/jobseeker_users`, JSON.stringify(db)).subscribe(); // this inserts into the database
         try {
           await this.verify();
           msg.success = true;
