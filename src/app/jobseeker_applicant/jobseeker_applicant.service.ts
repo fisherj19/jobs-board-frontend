@@ -11,7 +11,9 @@ export interface Client {
   gender: string;
   support_contact: string;
   phone_number: string;
+  address: string;
   email_address: string;
+  experience: string;
   owns_car: boolean;
   has_license: boolean;
   ride_available: boolean;
@@ -29,10 +31,10 @@ export class JobseekerService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${this.server}/api/jobseekers_users`);
+    return this.http.get<Client[]>(`${this.server}/api/jobseeker_users`);
   }
 
-  insert(values: Client): Observable<any> {
-    return this.http.post<any>(`${this.server}/api/jobseekers_users`, JSON.stringify(values));
+  update(values: Client): Observable<any> {
+    return this.http.put<any>(`${this.server}/api/jobseeker_users`, JSON.stringify(values));
   }
 }
