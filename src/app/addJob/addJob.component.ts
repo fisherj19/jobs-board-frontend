@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Validators } from '@angular/forms';
-import { JobseekerService } from './jobseeker_applicant.service';
+import { addJobService } from './addJob.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service'; 
 
@@ -12,21 +11,42 @@ import { AuthService } from '../services/auth.service';
   //styleUrls: ...
 })
 
-
-
-export class ApplicantComponent {
+export class JobComponent {
     basicForm = this.fb.group({
       companyName: [''],
       jobName: [''],
       jobDescription: [''],
-      whoContact = this.fb.group({
-        name: [''],
-      phoneNumber: [''],
-      email: [''],
+      whoContact: this.fb.group({
+          name: [''],
+          phoneNumber: [''],
+          email: [''],
       }),
       listDate: [''],
       fillDate: ['']
     })
 
-      constructor(private authService: AuthService, private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
+      constructor(private authService: AuthService, private fb: FormBuilder, private addJobService: addJobService, private router: Router){}
+
+      updateProfile() {
+        this.basicForm.patchValue({
+          firstName: 'Nancy',
+          address:{
+            street: '123 Drew Street'
+          }
+        });
+      }
+    
+      goProfilePage(){
+        this.router.navigate(['/js_profile'])
+      }
+    
+      onSubmit(): void {
+        const myForm = this.basicForm.value;
+        myForm.id = this.authService.u.uid
+        this.addJobService.insert(myForm).subscribe(
+          () => console.log('success'),
+          (err) => console.error(err)
+        );
+      } 
+
 }
