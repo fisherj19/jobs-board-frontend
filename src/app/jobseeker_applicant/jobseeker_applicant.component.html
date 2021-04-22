@@ -1,18 +1,13 @@
-<div id="background">
-
-    <div id="updateApplicant">
-
-       <h2>Applicant Profile</h2>
+<div id="updateApplicant">
+     
+     <h2>Applicant Profile</h2>
 
         <meta content="width=divice-width, initial-scale=1.0">
 
         <body>
 
-        <div>
-            <p>Profile Picture</p>
-        </div>
-
         <!--Start of FORM-->
+
         <form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
             <fieldset id="basicInfo">
                 <legend>Basic Info</legend>
@@ -26,7 +21,6 @@
                     <input type="text" formControlName="lastName"><br>
                 </label>
             
-                <div>
                     <label>
                         Date of Birth:<br>
                         <input type="text" formControlName="dateOfBirth"><br>
@@ -50,11 +44,11 @@
                         Email Address:<br>
                         <input type="text" formControlName="email_address"><br>
                     </label>
-                </div>
             </fieldset>
 
         <!--Address-->
             <div formGroupName="address">
+
                 <fieldset id="address">
                     <legend>Address</legend>
 
@@ -84,7 +78,8 @@
                     <input type="checkbox" id="primaryAddress" name="primaryAddress">
                     <label for="primaryAddress">Is This Your Primary Adress?</label><br>
                 </fieldset>
-            </div>
+
+                </div>
 
         <!--MORE INFO-->
 
@@ -147,21 +142,35 @@
         
         <!--SUBMIT BUTTON-->
 
+        <p>
+            <button id="formButton" (click)="updateProfile()">Auto Update</button>
+        </p>
+
         <button id="formButton" type="reset">Reset</button>
 
-        <button id="formButton" type="submit">Submit</button>
-
-        <p>
-            <button id="formButton" (click)="updateProfile()">Update Profile</button>
-        </p>
+        <button id="formButton" type="submit" (click)="goProfilePage()">Submit</button>
 
         </form>
 
-        <button class="btn btn-primary" (click)="goProfilePage()">Go to My Profile</button>
+        <button id="go-to-profile-button" class="btn btn-primary" (click)="goProfilePage()">Go Back</button>
+
+        <div id="editProfilePicture">
+            <img id="editProfilePic" src="assets\profile_picture.png" alt="Profile Picture" 
+            width="160" height="160">
+        </div>
+
+        <label id= "selectPicture">
+            Choose Photo:
+            <select>
+                <option value="select">Select</option>
+                <option value= 1 >Picture 1</option>
+                <option value= 2 >Picture 2</option>
+                <option value= 5 >Picture 3</option>
+                <option value= 7 >Picture 4</option>
+            </select>
+        </label>
 
 
         </body>
-
-    </div>
 
 </div>
