@@ -37,7 +37,7 @@ select {
 }
 
 fieldset {
-  width: 250px;
+  width: 260px;
 }
 
 //Job Seeker CSS:
@@ -45,22 +45,23 @@ fieldset {
   float: left;
   position: relative;
   margin: 10px;
-  top: 350px;
-  left: 150px;
+  top: 0px;
+  left: 760px;
 }
 
 #go-to-profile-button {
   float: left;
   position: relative;
   margin: 10px;
-  right: 1010px;
+  right: 335px;
+  top: -435px;
 }
 
 #editProfilePicture{
   position: relative;
   background-color: #D8C3A5;
   left: 100px;
-  top: 40px;
+  top: 0px;
   width: 150px;
   height: 150px;
   border: 15px solid #E85A4F;
@@ -69,20 +70,20 @@ fieldset {
 
 #editProfilePic{
   position: relative;
-  top: -275px;
+  top: -475px;
   width: 150px;
   height: 150px;
 }
 
 #selectPicture{
   position: relative;
-  top: 50px;
-  right: 680px;
+  top: 20px;
+  right: 1000px;
 }
 
 #updateApplicant{
   background-color: #EAE7DC;
-  height: 800px;
+  height: 1200px;
 }
 
 #basicInfo{
@@ -105,8 +106,27 @@ fieldset {
   float: left;
   position: relative;
   background-color: #D8C3A5;
-  height: 325px;
+  height: 133px;
+  left: 111px;
+  top: 338px;
+}
+
+#experience{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 400px;
+  left: 110px;
+  top: -20px;
+}
+
+#jobDemographics{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 133px;
   left: 400px;
+  top: -100px;
 }
 
 //js-profile
