@@ -11,7 +11,8 @@
     <span class="flexspacer"></span>
 
 
-    <button mat-raised-button class="clickabul" routerLink="/js_profile">My Profile</button>
+    <button mat-raised-button class="clickabul" routerLink="/js_profile" *ngIf="!isCompany">My Profile</button>
+    <button mat-raised-button class="clickabul" routerLink="/company_profile" *ngIf="isCompany">My Profile</button>
     
     <span class="small-spacer"></span>
 

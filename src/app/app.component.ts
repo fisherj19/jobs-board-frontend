@@ -19,6 +19,7 @@ import { RegisterComponent } from './views/register.component';
 export class AppComponent implements OnInit, OnDestroy {
   isLoggedIn = false;
   isVerified = false;
+  isCompany = false;
   private subscription: Subscription;
 
   constructor(
@@ -34,6 +35,13 @@ export class AppComponent implements OnInit, OnDestroy {
       this.isLoggedIn = !!user;
       if (this.isLoggedIn) {
         this.isVerified = user.emailVerified;
+        if (this.isVerified) {
+          this.authService.getProfileType().subscribe(type => {
+            if (type === 'company') {
+              this.isCompany = true;
+            }
+          });
+        }
       }
     });
     this.subscription.add(this.msgService.push.subscribe(

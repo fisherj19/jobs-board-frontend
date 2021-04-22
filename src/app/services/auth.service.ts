@@ -7,7 +7,10 @@ import { HttpClient } from '@angular/common/http';
 
 import { Message } from './message.service';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 // import { userInfo } from 'os';
+
+export type ProfileType = 'company' | 'seeker';
 
 interface FBAuthUser {
   email: string;
@@ -146,6 +149,10 @@ export class AuthService {
     };
 
     return params;
+  }
+
+  getProfileType(): Observable<ProfileType> {
+    return this.http.get<ProfileType>(`${this.server}/api/profiletype`);
   }
 
   logout(): void {
