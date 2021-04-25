@@ -6,6 +6,43 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #EAE7DC;
+}
+
+#home_main {
+  background-color: #EAE7DC;
+  height: 600px;
+}
+
+#welcome_box {
+  background-color: #D8C3A5;
+  position: relative;
+  top: 125px;
+  height: 400px;
+}
+
+#welcome_text {
+  background-color: #D8C3A5;
+  position: relative;
+  width: 300px;
+  top: 200px;
+  left: 250px;
+}
+
+#welcome_line {
+  background-color: #D8C3A5;
+  position: relative;
+  width: 40px;
+  top: 150px;
+  left: 630px;
+}
+
+#welcome_slogan {
+  background-color: #D8C3A5;
+  position: absolute;
+  width: 400px;
+  top: 200px;
+  left: 750px;
 }
 
 .clickabul {
@@ -153,8 +190,10 @@ fieldset {
 
 .js_experience{
   position: relative;
+  background-color: #D8C3A5;
   left: 175px;
-  bottom: 200px;
+  bottom: 25px;
+  width: 525px;
 }
 
 #f-js_experience{
@@ -163,6 +202,8 @@ fieldset {
 
 .js_contact_info{
   position: relative;
+  background-color: #D8C3A5;
+  width: 325px;
 }
 
 #f-js_contact_info{
@@ -194,13 +235,13 @@ fieldset {
 
 //Company CSS:
 #background{
-  background-color:burlywood;
+  background-color: #EAE7DC;
 }
 #company_container{
   position: relative;
   top: 30px;
   height: 1300px;
-  background-color:#ffbcbc;
+  background-color: #EAE7DC;
   margin-left: 100px;
   margin-right: 450px;
 }
@@ -208,10 +249,13 @@ fieldset {
 #main{
   position: relative;
   top: 30px;
-  height: 500px;
-  background-color:aqua;
+  left: 50px;
+  height: 465px;
+  background-color: #D8C3A5;
   margin-left: 30px;
   margin-right: 30px;
+  border: 1px solid grey;
+  width: 607px;
 }
 
 #companyPicture{
@@ -219,6 +263,7 @@ fieldset {
   left: 40px;
   top: 30px;
   background-color: lightgrey;
+  border: 15px solid #E85A4F;
   width: 150px;
   height: 150px;
   padding: 50px;
@@ -253,6 +298,9 @@ fieldset {
 .company_contact_info{
   position: relative;
   float: right;
+  background-color: #D8C3A5;
+  top:  -450px;
+  left: 255px;
   border: 1;
 }
 
@@ -261,12 +309,20 @@ fieldset {
 }
 
 .company_job_list{
+  position: relative;
+  background-color: #D8C3A5;
+  top: 50px;
+  left: 125px;
   border: 1;
-  margin-right: 200px;
+  margin-right: 457px;
 }
 
 #f-company_job_list{
   width: 300px;
+}
+
+#color_for_companies{
+  background-color: #EAE7DC;
 }
 
 //------
