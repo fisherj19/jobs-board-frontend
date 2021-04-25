@@ -29,7 +29,6 @@ input[type=text] {
 }
 
 form {
-  
   left: 30px;
 }
 
@@ -38,49 +37,114 @@ select {
 }
 
 fieldset {
-  width: 250px;
+  width: 260px;
 }
 
 //Job Seeker CSS:
 #formButton {
   float: left;
+  position: relative;
   margin: 10px;
+  top: 0px;
+  left: 760px;
+}
+
+#go-to-profile-button {
+  float: left;
+  position: relative;
+  margin: 10px;
+  right: 335px;
+  top: -435px;
+}
+
+#editProfilePicture{
+  position: relative;
+  background-color: #D8C3A5;
+  left: 100px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  border: 15px solid #E85A4F;
+  padding: 50px;
+}
+
+#editProfilePic{
+  position: relative;
+  top: -475px;
+  width: 150px;
+  height: 150px;
+}
+
+#selectPicture{
+  position: relative;
+  top: 20px;
+  right: 1000px;
 }
 
 #updateApplicant{
-  background-color:cornsilk;
-  height: 600px;
+  background-color: #EAE7DC;
+  height: 800px;
 }
 
 #basicInfo{
   float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 325px;
+  left: 400px;
 }
 
 #address{
-  float: left
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 325px;
+  left: 400px;
 }
 
 #referalSource{
   float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 133px;
+  left: 111px;
+  top: 338px;
 }
 
-#profilePicture{
+#experience{
   float: left;
-  background-color: lightgrey;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 400px;
+  left: 110px;
+  top: -20px;
+}
+
+#jobDemographics{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 133px;
+  left: 400px;
+  top: -100px;
+}
+
+//js-profile
+
+#profilePicture{
+  position: relative;
+  left: 175px;
+  background-color: #D8C3A5;
   width: 150px;
   height: 150px;
-  border: 15px solid green;
+  border: 15px solid #E85A4F;
   padding: 50px;
-  margin-left: 200px;
-  margin-top: 30px;
 }
 
 .js_basic_info{
-  float:left;
-  border: 0;
-  margin-left: 20px;
-  margin-top: 60px;
-  margin-right: 60px;
+  position: relative;
+  left: 475px;
+  bottom: 200px;
 }
 
 #f-js_basic_info{
@@ -89,9 +153,8 @@ fieldset {
 
 .js_experience{
   position: relative;
-  top: 320px;
-  right: 640px;
-  border: 1;
+  left: 175px;
+  bottom: 200px;
 }
 
 #f-js_experience{
@@ -100,12 +163,33 @@ fieldset {
 
 .js_contact_info{
   position: relative;
-  border: 1;
-  margin-right: 200px;
 }
 
 #f-js_contact_info{
   width: 300px;
+}
+
+#js-main-div{
+  background-color: #EAE7DC;
+}
+
+#js-sub-div{
+  background-color: #EAE7DC;
+}
+
+#js-basic-div{
+  background-color: #EAE7DC;
+  height: 500px;
+  width: 750px;
+}
+
+#js-contact-div{
+  position: relative;
+  bottom: 500px;
+  left: 800px;
+  background-color: #EAE7DC;
+  height: 500px;
+  width: 400px;
 }
 
 //Company CSS:
@@ -183,6 +267,12 @@ fieldset {
 
 #f-company_job_list{
   width: 300px;
+}
+
+//------
+#ViewCompanyPage{
+  width: 500px;
+  height: 500px;
 }
 
 @media (max-height: 500px){

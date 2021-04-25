@@ -1,3 +1,5 @@
+<div id="updateApplicant">
+
 <h2>Applicant Profile</h2>
 
 <meta content="width=divice-width, initial-scale=1.0">
@@ -23,6 +25,7 @@
             </label>
         
             <div>
+     
                 <label>
                     Date of Birth:<br>
                     <input type="text" formControlName="dateOfBirth"><br>
@@ -152,7 +155,7 @@
             </fieldset>
 
                 <br>
-            <fieldset id="Job Demographics">
+            <fieldset id="jobDemographics">
                 <legend>Job Demographics</legend>
                 <label>
                     Enter your job skills:<br>
@@ -164,12 +167,29 @@
                     <input type="text" formControlName="job_interests" required><br>
                 </label>
             </fieldset>
-    
 
-    <button id="formButton" type="reset">Reset</button>
+        <button id="formButton" type="reset">Reset</button>
 
-    <button id="formButton" type="submit">Submit</button>
+        <button id="formButton" type="submit" (click)="goProfilePage()">Submit</button>
 
-    <button class="btn btn-primary" (click)="goProfilePage()">Go to My Profile</button>
-    </form>
+        </form>
+
+        <button id="go-to-profile-button" class="btn btn-primary" (click)="goProfilePage()">Go Back</button>
+
+        <div id="editProfilePicture">
+            <img id="editProfilePic" src="assets\profile_picture.png" alt="Profile Picture" 
+            width="160" height="160">
+        </div>
+
+        <label id= "selectPicture">
+            Choose Photo:
+            <select>
+                <option value="select">Select</option>
+                <option value= 1 >Picture 1</option>
+                <option value= 2 >Picture 2</option>
+                <option value= 5 >Picture 3</option>
+                <option value= 7 >Picture 4</option>
+            </select>
+        </label>
 </body>
+</div>
