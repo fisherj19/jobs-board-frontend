@@ -20,24 +20,20 @@ export class ApplicantComponent {
     gender: [''],
     phone_number: [''],
     email_address: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
+    street: [''],
+    city: [''],
+    state: [''],
+    zip: [''],
     has_license: [''],
     owns_car: [''],
     ride_available: [''],
     status_id: [''],
-    experience: this.fb.group({
-      pos1: [''],
-      comp1: [''],
-      pos2: [''],
-      comp2: [''],
-      pos3: [''],
-      comp3: ['']
-    }),
+    job_1: [''],
+    empl_1: [''],
+    job_2: [''],
+    empl_2: [''],
+    job_3: [''],
+    empl_3: [''],
     skills: [''],
     job_interests: ['']
   });
