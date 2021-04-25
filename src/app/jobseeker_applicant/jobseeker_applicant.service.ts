@@ -14,7 +14,7 @@ export interface Client {
   street: string;
   city: string;
   state: string;
-  zip: number;
+  zip: string;
   email_address: string;
   job_1: string;
   empl_1: string;
