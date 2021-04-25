@@ -52,4 +52,9 @@ export class ApplicantComponent {
       (err) => console.error(err)
     );
   }
+
+  callAll(): void{
+    this.onSubmit();
+    this.goProfilePage();
+  }
 }

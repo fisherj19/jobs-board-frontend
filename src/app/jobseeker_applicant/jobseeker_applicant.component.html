@@ -11,7 +11,7 @@
     </div>
 
     <!--Start of FORM-->
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <form form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
         <fieldset id="basicInfo">
             <legend>Basic Info</legend>
             <label>
@@ -170,7 +170,7 @@
 
         <button id="formButton" type="reset">Reset</button>
 
-        <button id="formButton" type="submit" (click)="goProfilePage()">Submit</button>
+        <button id="formButton" type="submit" (click)="callAll()">Submit</button>
 
         </form>
 
