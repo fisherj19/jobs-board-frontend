@@ -8,9 +8,12 @@ import { HttpClient } from '@angular/common/http';
 import { Message } from './message.service';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { Company } from '../companies/companies.service';
 // import { userInfo } from 'os';
 
-export type ProfileType = 'company' | 'seeker';
+export interface ProfileType {
+  type: 'company' | 'seeker';
+}
 
 interface FBAuthUser {
   email: string;
@@ -108,6 +111,35 @@ export class AuthService {
     );
   }
 
+  async createCompany(company: Company, password: string): Promise<Message> {
+    const msg: Message = { success: false, message: '' };
+
+    try {
+      const u = await this.firebaseAuth.createUserWithEmailAndPassword(company.primary_email, password);
+      try {
+        await u.user.updateProfile({ displayName: company.name, photoURL: '' });
+        msg.message = 'Your have registered your company successfully.';
+        company.id = u.user.uid;
+        this.http.post(`${this.server}/api/companies_users`, JSON.stringify(company)).subscribe(); // this inserts into the database
+        try {
+          await this.verify();
+          msg.success = true;
+          msg.message += ' Please look for your verification email!';
+          return msg;
+        } catch (err) {
+          msg.message += ` There was a problem sending your verification email. ${err.message}`;
+          return msg;
+        }
+      } catch (error) {
+        msg.message += ` There was a problem getting everything set up. Please try to login. ${error.message}`;
+        return msg;
+      }
+    } catch (e) {
+      msg.message = e.message;
+      return msg;
+    }
+  }
+
   async createRegular(reg: FBAuthUser): Promise<Message> {
     const msg: Message = { success: false, message: '' };
 
@@ -152,7 +184,7 @@ export class AuthService {
   }
 
   getProfileType(): Observable<ProfileType> {
-    return this.http.get<ProfileType>(`${this.server}/api/profiletype`);
+    return this.http.get<ProfileType>(`${this.server}/api/core/profiletype`);
   }
 
   logout(): void {

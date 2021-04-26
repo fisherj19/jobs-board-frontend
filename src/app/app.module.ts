@@ -40,6 +40,7 @@ import { HomeComponent } from './views/home.component';
 import { VerifyComponent } from './views/verify.component';
 import { JsProfileComponent } from './js_profile/js_profile.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { RegisterCompanyComponent } from './views/register-company/register-company.component';
 
 @NgModule({
   imports: [
@@ -78,6 +79,7 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
     VerifyComponent,
     JsProfileComponent,
     CompanyProfileComponent,
+    RegisterCompanyComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpAuthInterceptor, multi: true }

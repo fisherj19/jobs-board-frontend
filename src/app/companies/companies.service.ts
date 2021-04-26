@@ -17,12 +17,12 @@ export interface Company {
   state: string;
   zip_code: string;
   neighborhood_id: number;
-  date_created: Date;
-  created_by: string;
-  last_updated: Date;
-  updated_by: string;
-  date_reviewed: Date;
-  reviewed_by: string;
+  date_created?: Date;
+  created_by?: string;
+  last_updated?: Date;
+  updated_by?: string;
+  date_reviewed?: Date;
+  reviewed_by?: string;
 }
 
 @Injectable({

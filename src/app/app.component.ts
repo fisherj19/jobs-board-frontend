@@ -11,6 +11,7 @@ import { FlexMessage, MessageService } from './services/message.service';
 import { Dialog, DialogComponent } from './shared/dialog.component';
 
 import { RegisterComponent } from './views/register.component';
+import { RegisterCompanyComponent } from './views/register-company/register-company.component';
 
 @Component({
   selector: 'app-root',
@@ -37,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.isVerified = user.emailVerified;
         if (this.isVerified) {
           this.authService.getProfileType().subscribe(type => {
-            if (type === 'company') {
+            if (type.type === 'company') {
               this.isCompany = true;
             }
           });
@@ -70,6 +71,15 @@ export class AppComponent implements OnInit, OnDestroy {
   onRegister(): void {
     this.dialog.open(
       RegisterComponent,
+      {
+        width: '500px'
+      }
+    );
+  }
+
+  onRegisterCompany(): void {
+    this.dialog.open(
+      RegisterCompanyComponent,
       {
         width: '500px'
       }
