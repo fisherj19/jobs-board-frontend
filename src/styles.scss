@@ -11,13 +11,14 @@ body {
 
 #home_main {
   background-color: #EAE7DC;
-  height: 600px;
+  height: 720px;
 }
 
 #welcome_box {
   background-color: #D8C3A5;
+  border: 15px solid #E85A4F;
   position: relative;
-  top: 125px;
+  top: 50px;
   height: 400px;
 }
 
@@ -43,6 +44,20 @@ body {
   width: 400px;
   top: 200px;
   left: 750px;
+}
+
+#welcome-companies {
+  background-color: #EAE7DC;
+  position: relative;
+  float: left;
+  left: 140px;
+  top: 85px;
+  margin-right: 75px;
+  border-radius: 30%;
+}
+
+#welcome-companies:hover {
+  top: 60px;
 }
 
 .clickabul {
@@ -182,6 +197,7 @@ fieldset {
   position: relative;
   left: 475px;
   bottom: 200px;
+  height: 60px;
 }
 
 #f-js_basic_info{
