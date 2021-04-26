@@ -18,7 +18,7 @@ body {
   background-color: #D8C3A5;
   border: 15px solid #E85A4F;
   position: relative;
-  top: 50px;
+  top: 10px;
   height: 400px;
 }
 
@@ -51,13 +51,13 @@ body {
   position: relative;
   float: left;
   left: 140px;
-  top: 85px;
+  top: 55px;
   margin-right: 75px;
   border-radius: 30%;
 }
 
 #welcome-companies:hover {
-  top: 60px;
+  top: 45px;
 }
 
 .clickabul {
@@ -84,8 +84,10 @@ form {
   left: 30px;
 }
 
-select {
-
+h2 {
+  position: relative;
+  text-align: center;
+  top: 10px;
 }
 
 fieldset {
@@ -135,7 +137,7 @@ fieldset {
 
 #updateApplicant{
   background-color: #EAE7DC;
-  height: 800px;
+  height: 590px;
 }
 
 #basicInfo{
@@ -237,7 +239,7 @@ fieldset {
 #js-basic-div{
   background-color: #EAE7DC;
   height: 500px;
-  width: 750px;
+  width: 600px;
 }
 
 #js-contact-div{
