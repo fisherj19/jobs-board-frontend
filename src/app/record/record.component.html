@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <div>
+      Criminal History
+    </div>
+    <br>
+	
+
+   Select Criminal History
+	<select (change)="update($event)" >
+  <option *ngFor="let option of options" [value]="option.id">
+{{option.name}}
+</option>
+</select>
+<br>
+<br>
+ <h2>	Date Convicted: {{conv}}</h2>
+<h2>	Date Released: {{rel}}</h2>
+<h2>	Notes: {{note}}</h2>
+  </mat-card-content>
+</mat-card>
+
+done
