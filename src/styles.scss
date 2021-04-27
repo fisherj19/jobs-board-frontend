@@ -349,6 +349,47 @@ fieldset {
   height: 500px;
 }
 
+#buttons {
+	position: relative;
+	width: 420px;
+	height: 850px;
+	float: left;
+	overflow: auto;
+}
+
+#comp_button {
+	width: 400px;
+	height: 100px;
+}
+
+#button_text {
+	color: purple;
+	font: arial;
+	position: relative;
+	top: 40px;
+	right: 150px;
+	font-size: 18;
+	float: right;
+}
+
+#button_img {
+	width: 75px;
+	height: 75px;
+	float: left;
+	vertical-align: bottom;
+	margin: 0px 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#company_profile {
+	display: inline-block;
+	position: relative;
+	width: 900px;
+	height: 850px;
+}
+
 @media (max-height: 500px){
   body {
     background-color: green;
