@@ -18,9 +18,35 @@ export class CompaniesComponent implements OnInit {
       this.companies = companies;
       this.ready = true;
     });
+    this.createList();
   }
 
   goCompanyProfilePage(){
     this.router.navigate(['/company-profile'])
+  }
+
+  createList(){
+	for(var i=0;i<30;i++){
+		var str = document.createElement("p");
+		var img = document.createElement("img");
+		var btn = document.createElement("button");
+
+		str.innerText = "company name";
+		str.setAttribute("id", "button_text");
+		str.setAttribute("class", "center");
+
+		img.src = "assets/profile_picture.png";
+		img.setAttribute("id", "button_img");
+
+		btn.setAttribute("id", "comp_button");
+		btn.appendChild(str);
+		btn.appendChild(img);
+		btn.onclick = 
+		function newPage(){
+			document.getElementById("frame").setAttribute("src", "company-profile");
+		}
+
+		document.getElementById("buttons").appendChild(btn);
+	}
   }
 }

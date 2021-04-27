@@ -6,10 +6,18 @@
   Please wait ...
 </p>
 
-<!-- Button For TESTING PURPOSES-->
-<button class="btn btn-primary" (click)="goCompanyProfilePage()">Visit</button>
+<body>
+	<div>
+		<section id="buttons">
+		</section>
+	</div>
 
-<iframe id="ViewCompanyPage" src="goCompanyProfilePage()" title="View of the Page"></iframe>
+	<div>
+		<section id="company_profile">
+			<iframe id="frame" src="company-profile" width="900" height="850"></iframe>
+		</section>
+	</div>
+</body>
 
 <ng-template #show>
   <p *ngFor="let c of companies">
