@@ -37,7 +37,7 @@ export class JobComponent {
       }
     
       goProfilePage(){
-        this.router.navigate(['/js_profile'])
+        this.router.navigate(['/job_screen'])
       }
     
       onSubmit(): void {
