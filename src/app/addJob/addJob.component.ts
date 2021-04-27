@@ -27,7 +27,7 @@ export class JobComponent {
 
       constructor(private authService: AuthService, private fb: FormBuilder, private addJobService: addJobService, private router: Router){}
 
-      updateProfile() {
+      updateAddJob() {
         this.basicForm.patchValue({
           firstName: 'Nancy',
           address:{
@@ -36,7 +36,7 @@ export class JobComponent {
         });
       }
     
-      goProfilePage(){
+      goJobScreen(){
         this.router.navigate(['/job_screen'])
       }
     
