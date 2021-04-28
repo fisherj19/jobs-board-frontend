@@ -26,7 +26,7 @@ export class CompaniesComponent implements OnInit {
   }
 
   createList(){
-	for(var i=0;i<30;i++){
+	for(var i=0;i<2;i++){
 		var str = document.createElement("p");
 		var img = document.createElement("img");
 		var btn = document.createElement("button");
