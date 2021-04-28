@@ -37,7 +37,7 @@ export class JobComponent {
       }
     
       goJobScreen(){
-        this.router.navigate(['/job_screen'])
+        this.router.navigate(['/job-screen'])
       }
     
       onSubmit(): void {
