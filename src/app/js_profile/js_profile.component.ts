@@ -22,6 +22,9 @@ export class JsProfileComponent implements OnInit {
       this.user_info = user_info;
       this.ready = true;
     });
+	if (typeof this.user_info !== "undefined"){
+	console.log('help it broke again');
+	};
   }
 
   updateProfile(){
