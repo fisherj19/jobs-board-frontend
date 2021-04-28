@@ -18,12 +18,15 @@ export class CompaniesComponent implements OnInit {
       this.companies = companies;
       this.ready = true;
     });
-    this.createList();
   }
 
   goCompanyProfilePage(){
     this.router.navigate(['/company-profile'])
   }
+
+	newPage(){
+		document.getElementById("frame").setAttribute("src", "company-profile");
+	}
 
   createList(){
 	for(var i=0;i<2;i++){
@@ -41,10 +44,7 @@ export class CompaniesComponent implements OnInit {
 		btn.setAttribute("id", "comp_button");
 		btn.appendChild(str);
 		btn.appendChild(img);
-		btn.onclick = 
-		function newPage(){
-			document.getElementById("frame").setAttribute("src", "company-profile");
-		}
+		btn.onclick = this.newPage;
 
 		document.getElementById("buttons").appendChild(btn);
 	}

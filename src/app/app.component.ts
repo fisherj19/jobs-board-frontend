@@ -47,6 +47,13 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       }
     ));
+
+    //this checks if the window is an iframe or not
+    if(window.location !== window.parent.location){
+	document.getElementById("toolbar_prim").style.display = "none";
+	document.getElementById("toolbar_row").style.display = "none";
+	document.getElementById("back_button").style.display = "none";
+    }
   }
 
   ngOnDestroy(): void {

@@ -260,6 +260,7 @@ fieldset {
 //Company Profile CSS: -------------------------------------------------------------------------
 #background{
   background-color: #EAE7DC;
+  overflow: hidden;
 }
 #company_container{
   position: relative;
@@ -268,6 +269,7 @@ fieldset {
   background-color: #EAE7DC;
   margin-left: 100px;
   margin-right: 450px;
+  display: inline-block;
 }
 
 #main{
