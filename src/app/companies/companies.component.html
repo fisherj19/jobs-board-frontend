@@ -9,12 +9,18 @@
 <body>
 	<div>
 		<section id="buttons">
+			<p *ngFor='let c of companies'>
+				<!-- <img src="assets/profile_picture.png" alt="" id = "button_img"> -->
+				<button (click) = "newPage()" id = "comp_button">
+					<img src="assets/profile_picture.png" alt="" id = "button_img">
+					{{c.name}}
+				</button>
+			</p>
 		</section>
 	</div>
-
 	<div>
 		<section id="company_profile">
-			<iframe id="frame" src="company-profile" width="900" height="850"></iframe>
+			<iframe id="frame" src="company-profile" width="1300" height="850"></iframe>
 		</section>
 	</div>
 </body>
