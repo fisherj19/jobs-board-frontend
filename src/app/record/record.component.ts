@@ -8,15 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RecordComponent implements OnInit {
 	@Input() data?: any;
-	conv: string="cat";
-	rel: string = "bob";
-	note: string="note";
+	conv: string="-";
+	rel: string = "-";
+	note: string="-";
 
 options = [
-   {id: 1, name: 'Jaywalking', conv: 'April 5, 2019', rel: 'April 6, 2019', note: 'pasta'},
-{id: 2, name: 'op 2', conv: 'April 5', rel: 'april 6', note: 'pasta'},
-{id: 3, name: 'John', conv: 'April 5', rel: 'april 6', note: 'pasta'},
-{id: 4, name: 'birthday', conv: 'April 5', rel: 'april 6', note: 'pasta'}
+   {id: 1, name: 'Jaywalking', conv: 'April 5, 2019', rel: 'April 6, 2019', note: 'Fine is paid.'},
+{id: 2, name: 'Trespassing', conv: 'November 24, 2017', rel: 'November 25, 2017', note: 'Spend night in jail, released on bond.  Charges since dropped.'}
+
 ];
  
  constructor() { }
