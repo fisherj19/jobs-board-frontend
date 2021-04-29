@@ -52,7 +52,6 @@ export class AppComponent implements OnInit, OnDestroy {
     if(window.location !== window.parent.location){
 	document.getElementById("toolbar_prim").style.display = "none";
 	document.getElementById("toolbar_row").style.display = "none";
-	document.getElementById("back_button").style.display = "none";
     }
   }
 

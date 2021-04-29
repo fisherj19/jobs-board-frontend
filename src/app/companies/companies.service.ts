@@ -23,6 +23,7 @@ export interface Company {
   updated_by: string;
   date_reviewed: Date;
   reviewed_by: string;
+  company_description: string;
 }
 
 @Injectable({
