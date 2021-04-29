@@ -25,16 +25,11 @@ export class JobComponent {
       constructor(private fb: FormBuilder, private addJobService: addJobService, private router: Router){}
 
       updateAddJob() {
-        this.basicForm.patchValue({
-          firstName: 'Nancy',
-          address:{
-            street: '123 Drew Street'
-          }
-        });
+        this.router.navigate(['/addJob'])
       }
     
       goJobScreen(){
-        this.router.navigate(['/job-screen'])
+        this.router.navigate(['/addJob'])
       }
     
       onSubmit(): void {
