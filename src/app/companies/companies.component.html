@@ -11,7 +11,7 @@
 		<section id="buttons">
 			<p *ngFor='let c of companies'>
 				<!-- <img src="assets/profile_picture.png" alt="" id = "button_img"> -->
-				<button (click) = "newPage()" id = "comp_button">
+				<button (click) = "newPage(c)" id = "comp_button">
 					<img src="assets/profile_picture.png" alt="" id = "button_img">
 					{{c.name}}
 				</button>
@@ -19,20 +19,13 @@
 		</section>
 	</div>
 	<div>
-		<section id="company_profile">
+		<section style="display: none" id="company_profile">
 			<iframe id="frame" src="company-profile" width="1300" height="850"></iframe>
 		</section>
 	</div>
 </body>
 
 <ng-template #show>
-  <p *ngFor="let c of companies">
-    <b>{{c.name}}</b>
-    <br>
-    {{c.address1}}
-    <br>
-    {{c.city}} {{c.zip_code}}
-  </p>
 </ng-template>
 
 </div>
