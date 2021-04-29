@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-job-screen',
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  updateProfile(){
+    this.router.navigate(['/job-screen'])
   }
 
 }
