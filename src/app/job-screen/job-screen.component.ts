@@ -15,7 +15,7 @@ export class JobScreenComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateProfile(){
+  updateAddJob(){
     this.router.navigate(['/job-screen'])
   }
 
