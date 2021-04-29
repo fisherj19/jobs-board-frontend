@@ -1,0 +1,53 @@
+<p>Add a job to your company board.</p>
+
+<p *ngIf="!ready; else show">
+    Please wait ...
+  </p>
+
+  <div>
+    <fieldset id="job_info">
+      <legend>Basic Information</legend>
+      <label>
+        Name of Company:<br>
+        <input type="text" formControlName="companyName" required><br>
+      </label>
+      <label>
+        Name of Job:<br>
+        <input type="text" formControlName="jobName" required><br>
+      </label>
+      <label>
+        Description of Job:<br>
+        <input type="text" formControlName="jobDescription" required><br>
+      </label>
+      <fieldset id="moreInfo">
+      <legend>Who To Contact</legend>
+      <label>
+        Name:<br>
+        <input type="text" formControlName="contactName" required><br>
+      </label>
+      <label>
+        Phone Number:<br>
+        <input type="text" formControlName="contactNumber" required><br>
+      </label>
+      <label>
+        Email:<br>
+        <input type="text" formControlName="contactEmail" required><br>
+      </label>
+    </fieldset>
+      <label>
+        Date Listed:<br>
+        <input type="text" formControlName="listDate" required><br>
+      </label>
+      <label>
+        Date Filled:<br>
+        <input type="text" formControlName="fillDate" required><br>
+      </label>
+      
+    </fieldset>
+</div>
+
+<button id="formButton" type="reset">Reset</button>
+<button id="formButton" type="submit">Submit</button>
+<p>
+    <button id="formButton" (click)="updateAddJob()">Update Jobs</button>
+</p>
