@@ -1,160 +1,191 @@
+<div id="updateApplicant">
 
-<h2>Applicant Profile</h2>
+<h2>Update User Profile</h2>
 
 <meta content="width=divice-width, initial-scale=1.0">
 
 <body>
 
-<div>
-    <p>Profile Picture</p>
-</div>
-
-<!--Start of FORM-->
-<form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <fieldset id="basicInfo">
-        <legend>Basic Info</legend>
-        <label>
-            First Name:<br>
-            <input type="text" formControlName="firstName" required><br>
-        </label>
-    
-        <label>
-            Last Name:<br>
-            <input type="text" formControlName="lastName"><br>
-        </label>
-    
-        <div>
+    <!--Start of FORM-->
+    <form form action="/results.html" method="GET" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <fieldset id="basicInfo">
+            <legend>Basic Info</legend>
             <label>
-                Date of Birth:<br>
-                <input type="text" formControlName="dateOfBirth"><br>
+                First Name:<br>
+                <input type="text" formControlName="firstName" required><br>
             </label>
-    
+        
             <label>
-                Gender:
-                <select id="gender">
+                Last Name:<br>
+                <input type="text" formControlName="lastName"><br>
+            </label>
+        
+            <div>
+     
+                <label>
+                    Date of Birth:<br>
+                    <input type="text" formControlName="dateOfBirth"><br>
+                </label>
+        
+                <label>
+                    Gender:
+                    <select id="gender">
+                        <option value="select">Select</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label><br>
+                <label>
+                    Phone Number:<br>
+                    <input type="text" formControlName="phone_number"><br>
+                </label>
+                <label>
+                    Email Address:<br>
+                    <input type="text" formControlName="email_address"><br>
+                </label>
+            </div>
+        </fieldset>
+
+    <!--Address-->
+
+            <fieldset id="address">
+                <legend>Current Address</legend>
+
+                <label>
+                    Street:<br>
+                    <input type="text" formControlName="street">
+                </label><br>
+        
+                <label>
+                    City:<br>
+                    <input type="text" formControlName="city">
+                </label><br>
+        
+                <label>
+                    State:<br>
+                    <input type="text" formControlName="state">
+                </label><br>
+        
+                <label>
+                    Zip Code:<br>
+                    <input type="text" formControlName="zip">
+                </label><br>
+            </fieldset>
+
+
+        <fieldset id="referalSource">
+            <legend>Other Information</legend>
+            <label>
+                Do you have a license?:
+                <select formControlName = "has_license">
                     <option value="select">Select</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                    <option value="other">Other</option>
+                    <option value= "true" >Yes</option>
+                    <option value= "false">No</option>
                 </select>
             </label><br>
 
             <label>
-                Phone Number:<br>
-                <input type="text" formControlName="phone_number"><br>
-            </label>
-            <label>
-                Email Address:<br>
-                <input type="text" formControlName="email_address"><br>
-            </label>
-        </div>
-    </fieldset>
-
-<!--Address-->
-    <div formGroupName="address">
-        <fieldset id="address">
-            <legend>Address</legend>
+                Do you own a car?:
+                <select formControlName = "owns_car">
+                    <option value="select">Select</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </label><br>
 
             <label>
-                Street:<br>
-                <input type="text" formControlName="street">
+                Do you have a ride available?:
+                <select formControlName = "ride_available">
+                    <option value="select">Select</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
             </label><br>
-    
+
             <label>
-                City:<br>
-                <input type="text" formControlName="city">
+                Select your start availability:
+                <select formControlName = "status_id">
+                    <option value="select">Select</option>
+                    <option value= 1 >Ready to start in 6+ months</option>
+                    <option value= 2 >Ready to start in 3-5 months</option>
+                    <option value= 5 >Ready to start in 1-2 months</option>
+                    <option value= 7 >Ready to start in less than 1 month</option>
+                </select>
             </label><br>
-    
-            <label>
-                State:<br>
-                <input type="text" formControlName="state">
-            </label><br>
-    
-            <label>
-                Zip Code:<br>
-                <input type="text" formControlName="zip">
-            </label><br>
-    
-            <input type="checkbox" id="currentAddress" name="currentAddress">
-            <label for="currentAddress">Is This Your Current Adress?</label><br>
-    
-            <input type="checkbox" id="primaryAddress" name="primaryAddress">
-            <label for="primaryAddress">Is This Your Primary Adress?</label><br>
         </fieldset>
-    </div>
+        <!--job information-->
+        <br>
+            <fieldset id="experience">
+                <legend>Experience</legend>
+                <p>
+                    Below, please enter previous jobs/volunteering that you have held, in order of relevance.  Please include the company/organization name.
+                </p>
 
-<!--MORE INFO-->
+                <label>
+                    Position #1:
+                    <input type="text" formControlName="job_1"><br>
+                </label>
+                <label>
+                    Employer #1:
+                    <input type="text" formControlName="empl_1"><br>
+                </label>
+                <br>
+                <label>
+                    Position #2:
+                    <input type="text" formControlName="job_2"><br>
+                </label>
+                <label>
+                    Employer #2:
+                    <input type="text" formControlName="empl_2"><br>
+                </label>
+                <br>
+                <label>
+                    Position #3:
+                    <input type="text" formControlName="job_3"><br>
+                </label>
+                <label>
+                    Employer #3:
+                    <input type="text" formControlName="empl_3"><br>
+                </label>
+            </fieldset>
 
-    <fieldset id="referalSource">
-        <legend>Other Information</legend>
-        <label>
-            Do you have a license?:
-            <select formControlName = "has_license">
+                <br>
+            <fieldset id="jobDemographics">
+                <legend>Job Demographics</legend>
+                <label>
+                    Enter your job skills:<br>
+                    <input type="text" formControlName="skills"><br>
+                </label>
+
+                <label>
+                    Enter jobs you are interested in:<br>
+                    <input type="text" formControlName="job_interests" required><br>
+                </label>
+            </fieldset>
+
+        <button id="formButton" type="reset">Reset</button>
+
+        <button id="formButton" type="submit" (click)="callAll()">Submit</button>
+
+        </form>
+
+        <button id="go-to-profile-button" class="btn btn-primary" (click)="goProfilePage()">Go Back</button>
+
+        <div id="editProfilePicture">
+            <img id="editProfilePic" src="assets\profile_picture.png" alt="Profile Picture" 
+            width="160" height="160">
+        </div>
+
+        <label id= "selectPicture">
+            Choose Photo:
+            <select>
                 <option value="select">Select</option>
-                <option value= "true" >Yes</option>
-                <option value= "false">No</option>
+                <option value= 1 >Picture 1</option>
+                <option value= 2 >Picture 2</option>
+                <option value= 5 >Picture 3</option>
+                <option value= 7 >Picture 4</option>
             </select>
-        </label><br>
-
-        <label>
-            Do you own a car?:
-            <select formControlName = "owns_car">
-                <option value="select">Select</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select>
-        </label><br>
-
-        <label>
-            Do you have a ride available?:
-            <select formControlName = "ride_available">
-                <option value="select">Select</option>
-                <option value="true">Yes</option>
-                <option value="false">Yes</option>
-            </select>
-        </label><br>
-
-        <label>
-            Select your start availability:
-            <select formControlName = "status_id">
-                <option value="select">Select</option>
-                <option value= 1 >Ready to start in 6+ months</option>
-                <option value= 2 >Ready to start in 3-5 months</option>
-                <option value= 5 >Ready to start in 1-2 months</option>
-                <option value= 7 >Ready to start in less than 1 month</option>
-            </select>
-        </label><br>
-
-        <label>
-            Enter your job skills:<br>
-            <input type="text" formControlName="skills"><br>
         </label>
-
-        <label>
-            Enter your Support Contact:<br>
-            <input type="text" formControlName="support_contact"><br>
-        </label>
-
-        <label>
-            Enter jobs you are interested in:<br>
-            <input type="text" formControlName="job_interests" required><br>
-        </label>
-
-    </fieldset>
-  
-<!--SUBMIT BUTTON-->
-
-<button id="formButton" type="reset">Reset</button>
-
-<button id="formButton" type="submit">Submit</button>
-
-<p>
-    <button id="formButton" (click)="updateProfile()">Update Profile</button>
-</p>
-
-</form>
-
-<button class="btn btn-primary" (click)="goProfilePage()">Go to My Profile</button>
-
-
 </body>
+</div>

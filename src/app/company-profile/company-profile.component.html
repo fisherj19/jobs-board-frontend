@@ -1,2 +1,63 @@
-<p>company-profile works!</p>
-<button class="btn btn-primary" (click)="updateCompanyProfile()">Back</button>
+<div id="background">
+
+    <h2>Company Profile</h2>
+
+    <div id="company_container">
+
+        <button id="back_button" class="btn btn-primary" (click)="updateCompanyProfile()">Back</button>
+
+        <div id="main">
+
+        <div id="companyPicture">
+            <img id="profilePic" src="assets\profile_picture.png" alt="Company Picture" width="160" height="160">
+        </div>
+
+        <div>
+            <section class="company_basic_info">
+                <fieldset id="f-company_basic_info">
+                    <h3 id="c_prof_name">Company Name</h3>
+                    <p id="c_prof_est">Year Established: </p>
+                </fieldset>
+            </section>
+        </div>
+
+        <div>
+            <section class="company_experience">
+                <fieldset id="f-company_experience">
+                    <p id="c_prof_desc">Description:</p><br>
+                </fieldset>
+            </section>
+        </div>
+
+        </div>
+
+        <div>
+            <section class="company_contact_info">
+                <fieldset id="f-company_contact_info">
+                    <h3><b>Contact Information</b></h3>
+                    <p id="c_prof_phone">Phone: .....</p><br>
+                    <p id="c_prof_email">Email: .....</p><br><br><br><br>
+		    <h4><b>Address</b></h4><br>
+		    <p id="c_prof_address"></p><br>
+                    <p id="c_prof_city">City: </p><br>
+                    <p id="c_prof_state">State: </p><br>
+                    <p id="c_prof_zip">Zip: </p><br>
+                </fieldset>
+            </section>
+        </div>
+
+        <div>
+            <section class="company_job_list">
+                <fieldset id="f-company_job_list">
+                    <p>Job Available:</p><br>
+                    <p>1. .....</p><br>
+                    <p>2. .....</p><br>
+                    <p>3. .....</p><br>
+                    <p>4. .....</p><br>
+                </fieldset>
+            </section>
+        </div>
+
+    </div>
+    
+</div>

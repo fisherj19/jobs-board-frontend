@@ -6,6 +6,58 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #EAE7DC;
+}
+
+#home_main {
+  background-color: #EAE7DC;
+  height: 720px;
+}
+
+#welcome_box {
+  background-color: #D8C3A5;
+  border: 15px solid #E85A4F;
+  position: relative;
+  top: 10px;
+  height: 400px;
+}
+
+#welcome_text {
+  background-color: #D8C3A5;
+  position: relative;
+  width: 300px;
+  top: 200px;
+  left: 250px;
+}
+
+#welcome_line {
+  background-color: #D8C3A5;
+  position: relative;
+  width: 40px;
+  top: 150px;
+  left: 630px;
+}
+
+#welcome_slogan {
+  background-color: #D8C3A5;
+  position: absolute;
+  width: 400px;
+  top: 200px;
+  left: 750px;
+}
+
+#welcome-companies {
+  background-color: #EAE7DC;
+  position: relative;
+  float: left;
+  left: 140px;
+  top: 55px;
+  margin-right: 75px;
+  border-radius: 30%;
+}
+
+#welcome-companies:hover {
+  top: 45px;
 }
 
 .clickabul {
@@ -29,50 +81,126 @@ input[type=text] {
 }
 
 form {
-  
   left: 30px;
 }
 
+
+h2 {
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+
 fieldset {
-  width: 250px;
+  width: 260px;
 }
 
-#basicInfo {
-  float: left;
-  margin: 50px;
-}
-
-#address {
-  float: left;
-  margin: 50px;
-}
-
-#referalSource {
-  float: left;
-  margin: 50px;
-}
-
+//Update User Profile CSS: --------------------------------------------------------------------
 #formButton {
+  float: left;
+  position: relative;
   margin: 10px;
+  top: 0px;
+  left: 760px;
 }
 
-#profilePicture{
+#go-to-profile-button {
   float: left;
-  background-color: lightgrey;
+  position: relative;
+  margin: 10px;
+  right: 335px;
+  top: -435px;
+}
+
+#editProfilePicture{
+  position: relative;
+  background-color: #D8C3A5;
+  left: 100px;
+  top: 0px;
   width: 150px;
   height: 150px;
-  border: 15px solid green;
+  border: 15px solid #E85A4F;
   padding: 50px;
-  margin-left: 200px;
-  margin-top: 30px;
+}
+
+#editProfilePic{
+  position: relative;
+  top: -475px;
+  width: 150px;
+  height: 150px;
+}
+
+#selectPicture{
+  position: relative;
+  top: 20px;
+  right: 1000px;
+}
+
+#updateApplicant{
+  background-color: #EAE7DC;
+  height: 590px;
+}
+
+#basicInfo{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 325px;
+  left: 400px;
+}
+
+#address{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 325px;
+  left: 400px;
+}
+
+#referalSource{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 133px;
+  left: 111px;
+  top: 338px;
+}
+
+#experience{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 400px;
+  left: 110px;
+  top: -20px;
+}
+
+#jobDemographics{
+  float: left;
+  position: relative;
+  background-color: #D8C3A5;
+  height: 133px;
+  left: 400px;
+  top: -100px;
+}
+
+//User Profile CSS: -----------------------------------------------------------------
+#profilePicture{
+  position: relative;
+  left: 175px;
+  background-color: #D8C3A5;
+  width: 150px;
+  height: 150px;
+  border: 15px solid #E85A4F;
+  padding: 50px;
 }
 
 .js_basic_info{
-  float:left;
-  border: 0;
-  margin-left: 20px;
-  margin-top: 60px;
-  margin-right: 60px;
+  position: relative;
+  left: 475px;
+  bottom: 200px;
+  height: 60px;
 }
 
 #f-js_basic_info{
@@ -81,9 +209,10 @@ fieldset {
 
 .js_experience{
   position: relative;
-  top: 320px;
-  right: 640px;
-  border: 1;
+  background-color: #D8C3A5;
+  left: 175px;
+  bottom: 25px;
+  width: 525px;
 }
 
 #f-js_experience{
@@ -92,12 +221,182 @@ fieldset {
 
 .js_contact_info{
   position: relative;
-  border: 1;
-  margin-right: 200px;
+  background-color: #D8C3A5;
+  width: 325px;
 }
 
 #f-js_contact_info{
   width: 300px;
+}
+
+#js-main-div{
+  background-color: #EAE7DC;
+}
+
+#js-sub-div{
+  background-color: #EAE7DC;
+}
+
+#js-basic-div{
+  background-color: #EAE7DC;
+  height: 500px;
+  width: 600px;
+}
+
+#js-contact-div{
+  position: relative;
+  bottom: 500px;
+  left: 800px;
+  background-color: #EAE7DC;
+  height: 500px;
+  width: 400px;
+}
+#criminalrecord{
+position: relative;
+  top: 50px;
+  width: 325px;
+}
+  
+
+//Company Profile CSS: -------------------------------------------------------------------------
+#background{
+  background-color: #EAE7DC;
+  overflow: hidden;
+}
+#company_container{
+  position: relative;
+  top: 30px;
+  height: 1300px;
+  background-color: #EAE7DC;
+  margin-left: 100px;
+  margin-right: 450px;
+  display: inline-block;
+}
+
+#main{
+  position: relative;
+  top: 30px;
+  left: 50px;
+  height: 465px;
+  background-color: #D8C3A5;
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 1px solid grey;
+  width: 607px;
+}
+
+#companyPicture{
+  position: relative;
+  left: 40px;
+  top: 30px;
+  background-color: lightgrey;
+  border: 15px solid #E85A4F;
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+}
+
+.company_basic_info{
+  position: absolute;
+  bottom: 250px;
+  left: 300px;
+  border: 0;
+  margin-left: 20px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+#f-company_basic_info{
+  border: 0;
+}
+
+.company_experience{
+  position: relative;
+  left: 40px;
+  top: 40px;
+  border: 1;
+  margin-bottom: 30px;
+}
+
+#f-company_experience{
+  width: 500px;
+}
+
+.company_contact_info{
+  position: relative;
+  float: right;
+  background-color: #D8C3A5;
+  top:  -450px;
+  left: 255px;
+  border: 1;
+}
+
+#f-company_contact_info{
+  width: 300px;
+}
+
+.company_job_list{
+  position: relative;
+  background-color: #D8C3A5;
+  top: 50px;
+  left: 125px;
+  border: 1;
+  margin-right: 457px;
+}
+
+#f-company_job_list{
+  width: 300px;
+}
+
+#color_for_companies{
+  background-color: #EAE7DC;
+}
+
+// View Companies Page CSS: --------------------------------------------------------------
+#ViewCompanyPage{
+  width: 500px;
+  height: 500px;
+}
+
+#buttons {
+	position: relative;
+	width: 420px;
+	height: 850px;
+	float: left;
+	overflow: auto;
+}
+
+#comp_button {
+	width: 400px;
+	height: 100px;
+}
+
+#button_text {
+	color: purple;
+	font: arial;
+	position: relative;
+	top: 40px;
+	right: 150px;
+	font-size: 18;
+	float: right;
+}
+
+#button_img {
+	width: 75px;
+	height: 75px;
+	float: left;
+	vertical-align: bottom;
+	margin: 0px 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#company_profile {
+	display: inline-block;
+	position: relative;
+	width: 900px;
+	height: 850px;
 }
 
 @media (max-height: 500px){

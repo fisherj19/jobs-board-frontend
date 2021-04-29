@@ -5,7 +5,6 @@ import { JobseekerService } from './jobseeker_applicant.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service'; 
 
-
 @Component({
   templateUrl: './jobseeker_applicant.component.html',
   selector: 'app-name-editor',
@@ -21,31 +20,25 @@ export class ApplicantComponent {
     gender: [''],
     phone_number: [''],
     email_address: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
+    street: [''],
+    city: [''],
+    state: [''],
+    zip: [''],
     has_license: [''],
     owns_car: [''],
     ride_available: [''],
     status_id: [''],
+    job_1: [''],
+    empl_1: [''],
+    job_2: [''],
+    empl_2: [''],
+    job_3: [''],
+    empl_3: [''],
     skills: [''],
-    support_contact: [''],
     job_interests: ['']
   });
   
   constructor(private authService: AuthService, private fb: FormBuilder, private jobseekerService: JobseekerService, private router: Router){}
-
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address:{
-        street: '123 Drew Street'
-      }
-    });
-  }
 
   goProfilePage(){
     this.router.navigate(['/js_profile'])
@@ -53,10 +46,15 @@ export class ApplicantComponent {
 
   onSubmit(): void {
     const myForm = this.profileForm.value;
-    myForm.id = this.authService.u.uid
-    this.jobseekerService.insert(myForm).subscribe(
+    myForm.id = this.authService.u.uid;
+    this.jobseekerService.update(myForm).subscribe(
       () => console.log('success'),
       (err) => console.error(err)
     );
+  }
+
+  callAll(): void{
+    this.onSubmit();
+    this.goProfilePage();
   }
 }

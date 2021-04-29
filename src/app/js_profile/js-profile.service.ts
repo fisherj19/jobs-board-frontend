@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { environment } from 'src/environments/environment';
 
 export interface Client {
   id: string;
-  firstName: string;
-  lastName: string;
-  dateOfBirth: Date;
-  gender: string;
+  first_name: string;
+  last_name: string;
+  date_of_birth: Date;
+  sex: string;
   support_contact: string;
   phone_number: string;
   street: string;
@@ -33,16 +34,12 @@ export interface Client {
 @Injectable({
   providedIn: 'root'
 })
-export class JobseekerService {
+export class JsProfileService {
   private server = environment.server;
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${this.server}/api/jobseeker_users`);
-  }
-
-  update(values: Client): Observable<any> {
-    return this.http.put<any>(`${this.server}/api/jobseeker_users`, JSON.stringify(values));
+  getByID(userId: string): Observable<Client> {
+    return this.http.get<Client>(`${this.server}/api/jobseeker_users/${userId}`);
   }
 }
