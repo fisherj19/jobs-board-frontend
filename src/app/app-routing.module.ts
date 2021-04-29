@@ -10,14 +10,14 @@ import { LoginCompaniesComponent } from './views/loginCompanies.component';
 import { VerifyComponent } from './views/verify.component';
 import { JsProfileComponent } from './js_profile/js_profile.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
-import { JobScreenComponent } from './job-screen/job-screen.component';
+import { JobComponent } from './addJob/addJob.component';
 
 const notLoggedIn = () => map(user => user ? ['home'] : true);
 
 const routes: Routes = [
   { path: 'companies', loadChildren: () => import('./companies/companies.module').then(m => m.CompaniesModule) },
   { path: 'js_profile', component: JsProfileComponent },
-  { path: 'job-screen', component: JobScreenComponent },
+  { path: 'addJob', component: JobComponent },
   { path: 'home', component: HomeComponent },
   { path: 'applicant', component: ApplicantComponent },
   { path: 'company-profile', component: CompanyProfileComponent },
